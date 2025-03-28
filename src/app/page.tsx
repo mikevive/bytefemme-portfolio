@@ -10,11 +10,11 @@ export default function Home() {
         </header>
         <section className="flex flex-col h-full">
           <section className="flex flex-row h-16 w-full border-b border-black font-bold">
-            <div className="flex-1 flex justify-center items-center text-3xl">
+            <div className="flex-1 flex justify-center items-center text-2xl sm:text-3xl">
               <span className="text-secondary">BYTE</span>
               <span className="text-primary">FEMME</span>
             </div>
-            <div className="flex-1 flex justify-center items-center gap-5">
+            <div className="flex-1 hidden md:flex justify-center items-center gap-5">
               <p className="text-primary">HOME</p>
               <p>PROJECTS</p>
               <p>ABOUT</p>
@@ -59,25 +59,34 @@ export default function Home() {
             </div>
           </section>
           <section className="relative flex w-full h-full">
-            <section className="absolute top-0 bottom-0 left-2/4 right-0 h-full">
+            <section className="absolute h-[90%] sm:h-full w-full sm:w-3/4 md:w-2/4 bottom-0 -right-28 sm:right-0 overflow-hidden">
               <Image
+                className="hidden md:block"
                 src="/person.png"
                 alt="Bytefemme"
                 fill
                 objectFit="contain"
                 objectPosition="bottom left"
               />
+              <Image
+                className="block md:hidden"
+                src="/person.png"
+                alt="Bytefemme"
+                fill
+                objectFit="contain"
+                objectPosition="bottom right"
+              />
             </section>
-            <section className="absolute flex flex-col gap-6 top-14 right-2/4 text-left w-[450px]">
-              <h1 className="text-6xl font-bold text-secondary">
-                TURNING <span className="outlined text-4xl">DATA</span> <br />{" "}
-                INTO CURES
+            <section className="absolute flex flex-col items-start gap-6 top-14 right-auto lg:right-2/4 left-[5%] sm:left-20 md:left-42 lg:left-auto text-left w-2/4 sm:w-2/6 lg:w-auto">
+              <h1 className="text-5xl sm:text-6xl font-bold text-secondary">
+                TURNING <span className="outlined lg:text-4xl">DATA</span>{" "}
+                <br /> INTO CURES
               </h1>
               <p className="border-l-4 w-2/3 border-black pl-5">
                 Hi, I’m Nath, a data scientist with a passion for drug
                 discovery.
               </p>
-              <div className="relative h-[64px]">
+              <div className="relative h-[64px] hidden md:block md:scale-90 lg:scale-100">
                 <div className="absolute">
                   <svg
                     width="256"
@@ -128,7 +137,28 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <section className="relative bg-white border-1 border-gray-300 w-[320px] h-[200px] mt-5">
+              <div className="w-12 h-12 bg-primary block md:hidden">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="15,15 33,33"
+                    fill="none"
+                    stroke="#ffffff"
+                    strokeWidth="2"
+                  />
+                  <polyline
+                    points="33,18 33,33 18,33"
+                    fill="none"
+                    stroke="#ffffff"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </div>
+              <section className="relative bg-white border-1 border-gray-300 w-[320px] h-[200px] mt-5 hidden lg:block">
                 <div className="absolute w-[100px] h-[100px] bg-primary top-[50px]"></div>
                 <Image
                   className="absolute"
@@ -179,35 +209,47 @@ export default function Home() {
         </section>
         <footer className="flex flex-row justify-center items-center h-16 gap-5 text-white font-bold text-lg overflow-hidden bg-primary">
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
           <p>WELCOME</p>
-          <p>+</p>
-          <p>WELCOME</p>
-          <p>+</p>
+          <p>✦</p>
         </footer>
       </header>
+      <section className="h-1/2 w-full relative">
+        <Image
+          className="absolute object-cover"
+          src="/person-coding.png"
+          fill
+          alt="Bytefemme"
+        />
+        <div className="absolute w-full h-full flex items-center p-20">
+        <p className="text-3xl md:text-5xl text-white">
+          Data, Logic and Coffee <br /> In that Order
+        </p>
+        </div>
+      </section>
+      <section className="h-1/2 w-full"></section>
     </div>
   );
 }
