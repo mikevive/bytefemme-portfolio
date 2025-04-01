@@ -9,7 +9,7 @@ export default function Hero() {
       <figure className="absolute h-[90%] sm:h-full w-full sm:w-3/4 md:w-2/4 bottom-0 -right-28 sm:right-0 overflow-hidden">
         <Image
           className="object-contain object-right-bottom md:object-left-bottom "
-          src="/person.png"
+          src="/person-2.png"
           alt="Bytefemme"
           fill
         />
